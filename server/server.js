@@ -8,7 +8,9 @@ const app = express();
 //Middlewares
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
-app.use(require('./routes/usuarioRoutes'))
+
+//Configuracion global de rutas
+app.use(require('./routes/indexRoutes'))
 
 // Conectarnos a la base de datos
 mongoose.connect(process.env.URLDB,
