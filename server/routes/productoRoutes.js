@@ -72,7 +72,6 @@ app.get('/productos/:id', verificaToken, (req, res)=>{
 // ===================================================================
 app.get('/productos/buscar/:termino', verificaToken, (req, res)=>{
     let termino = req.params.termino;
-    
 
     let regex = new RegExp(termino, 'i');
 
